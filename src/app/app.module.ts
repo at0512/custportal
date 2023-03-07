@@ -9,6 +9,9 @@ import { CustomerdelivComponent } from './customerdeliv/customerdeliv.component'
 import { InquirydetailsComponent } from './inquirydetails/inquirydetails.component';
 import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
 import { FormsModule } from '@angular/forms';
+import { CreditmemoComponent } from './creditmemo/creditmemo.component';
+import { PayagesComponent } from './payages/payages.component';
+import { SalesorderComponent } from './salesorder/salesorder.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,10 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     CustomerdelivComponent,
     InquirydetailsComponent,
-    InvoiceDetailsComponent
+    InvoiceDetailsComponent,
+    CreditmemoComponent,
+    PayagesComponent,
+    SalesorderComponent
   ],
   imports: [
     BrowserModule,

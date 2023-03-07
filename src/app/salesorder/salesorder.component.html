@@ -14,13 +14,11 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3"  routerLink="/login">KAAR TECH</a>
+            <a class="navbar-brand ps-3" routerLink="/login">KAAR TECH</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
-         
-            <!-- Navbar-->
-
+          
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -46,37 +44,51 @@
             <div id="layoutSidenav_content">
                 <main>
                         <div class="content"> 
-                            <div class="search-here">
-                                <input type="text" name="search"  placeholder="Search"></div>
-                        
                             <div class="content-2">
                                 <div class="recent-payments">
                                     <div class="title">
-                                        <h1>CUSTOMER DELIVERY </h1>
+                                        <h1>Customer Sales Order Request</h1>
                                         
                                     </div>
+                                    <div class="main">
+                                        <form>
+                                            <span>
+                                                <i class="fa fa-user"></i>
+                                                <input    type="text"   placeholder="Username" name="username">
+                                            </span><br>
+                                            <button  >Submit</button>
+                                              
+                               
+                                        </form>
+                                    </div>
+                                    <div class="search-here">
+                                <input type="search" name="search"  placeholder="Search"></div>
                                     <table>
                                         <tr>
-                                            <th>Doc_NUM</th>
-                                            <th>NAME1</th>
-                                            <th>NAME2</th>
-                                            <th>Sale_Org</th>
-                                            <th>Telephone Number</th>
-                                            
-                                        <tr>
-                                            <!-- <tr *ngFor="let i of element | filter:searchText" > -->
-                                                <td> KUNNR._text</td>
-                                                <td> NAME1._text</td>
-                                                <td> NAME2._text</td>
-                                                <td> ORT01._text</td>
-                                                <td> TELF1._text</td>
-                                                
-                                        </tr>
-                                           
-                                        
+                                            <th>SHORT_TEXT</th>
+                                             <th>DOC_TYPE</th>
+                                             <th>DOC_DATE</th>						
+                                             <th>PURCH_NO</th>						
+                                             <th>VALID_TO</th>
+                                             <th>MATERIAL</th>
+                                             <th>CURRENCY</th>
+                                          </tr>
+                                    
+                                       
+                                        <tr >
+                                            <!-- <tr *ngFor="let sales_data of datasource | filter:searchText"> -->
+                                                <td>SHORT_TEXT._text</td>
+                                                <td>sales_data.DOC_TYPE._text</td>
+                                                <!-- <td>{{this.invoice_data.BSTWK_VF._text}}</td> -->
+                                                <td>sales_data.DOC_DATE._text</td>
+                                                <td>sales_data.PURCH_NO._text</td>
+                                                <td>sales_data.VALID_TO._text</td>
+                                                <td>sales_data.MATERIAL._text</td>
+                                                <td>sales_data.CURRENCY._text</td>
+                                            </tr>
+                                    
                                        
                                     </table>
-                               
                                 </div>
                             </div>  
                         </div>
